@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-Regular_0.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2-Bold_0.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold; }
+
+/*# sourceMappingURL=fonts.css.map */

@@ -1,0 +1,69 @@
+header
+	padding-top: 16px
+	color: #fff
+	height: 78px
+	background-color: $mainRedColor
+	.logo
+		padding-top: 4px
+	.desc
+		font-size: 1.8rem
+	.top_phone
+		font-weight: bold
+		font-size: 2.4rem
+		text-align: right
+		padding-top: 6px
+	.top_btn
+		a
+			max-width: 270px		
+main
+	height: 730px
+	background-image: url('../img/header_bg.jpg')
+	background-position: 50% -78px
+	background-repeat: no-repeat
+	text-align: center
+	.container
+		padding: 0
+	.banner
+		border: solid 2px #933535
+		width: 100%
+		max-width: 570px
+		border-radius: 3px
+		margin: 64px auto 48px
+		padding: 1.4rem 0 2rem
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			height: 11px
+			width: 234px
+			background-image: url('../img/banner_left.png')
+			background-repeat: no-repeat
+			background-size: 100%
+			right: 99.2%
+			top: 0
+			bottom: 0
+			margin: auto
+		&:after
+			@extend .banner:before
+			background-image: url('../img/banner_right.png')
+			right: auto
+			left: 99.4%
+		p
+			color: $redText
+			font-size: 3.2rem
+			font-weight: bold
+	h1
+		color: $redText
+		font-weight: bold
+		font-size: 6.2rem
+		line-height: 6.5rem
+		margin: 15px 0
+	h2
+		color: $greenText
+		font-weight: bold
+		font-size: 2.8rem
+		line-height: 3.6rem
+	a
+		margin: 6rem auto 0
+		
+
