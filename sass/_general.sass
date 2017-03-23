@@ -17,13 +17,26 @@ ul
 	list-style-type: none
 a
 	text-decoration: none
-a.popup
+a.popup,a.scroll
 	display: block
 .relative
 	position: relative
 button
 	border: none
 	background: none
+.review_wrapper
+	position: relative
+	.prev,.next
+		position: absolute
+		top: 45%
+		z-index: 20
+		cursor: pointer
+		i
+			font-size: 28px
+	.prev
+		left: 0
+	.next
+		right: 0
 .white_btn
 	border: solid 1px #fff
 	-webkit-border-radius: 20px
@@ -35,16 +48,20 @@ button
 	max-width: 370px
 	padding: 11px 0 15px
 	text-align: center
-	transition: all .3s
+	transition: all .4s
 	&:hover
-
+		border: solid 1px #fff
+		color: $mainRedColor
+		background-color: #fff
 .blue_btn
 	text-shadow: 0 -1px rgba(50,33,26,.47)
 	text-align: center
 	color: #fff
 	font-weight: bold
 	font-size: 2.4rem
-	background: linear-gradient(to bottom, #75d0fb, #5089be, #4a5d82)
+	//background: linear-gradient(to bottom, #75d0fb, #5089be, #4a5d82)
+	background-image: url('../img/white.png')
+	background-size: 100%
 	width: 100%
 	max-width: 370px
 	margin-right: auto
@@ -53,20 +70,10 @@ button
 	padding: 16px 0 20px
 	position: relative
 	box-shadow: 0 4px 3px rgba(0,0,0,.5)
-	&:before
-		content: ''
-		position: absolute
-		width: 80%
-		height: 1px
-		background: linear-gradient(to right, #62c2fe, #fff, #62c2fe)
-		left: 0
-		right: 0
-		margin: 0 auto
-		top: 2px
 	&:hover
-		background: linear-gradient(to top, #75d0fb, #5089be, #4a5d82)
+		background-image: url('../img/white_hover.png')
 		color: #fff
-button, button:focus, button:hover, input, .thumbnail, .slick-slide, img, ul, li, a, a:focus, a:hover, div, div:focus textarea, textarea:focus
+button, button:focus, button:hover, input, .thumbnail, .slick-slide, img, ul, li, a, a:focus, a:visited, a:hover, div, div:focus textarea, textarea:focus
 	outline: none
 	text-decoration: none
 	color: inherit
@@ -106,28 +113,26 @@ ul
 	list-style-type: none
 	padding: 0
 .thanks_body
-	background-image: url(../img/thanks_bg.jpg)
-	background-repeat: no-repeat
-	background-position-x: center
+	background-image: linear-gradient(to right bottom, #b46257, #fff)
 	margin: 0
 	height: 100%
-	color: #fff
+	color: #39466b
 	display: table
 	width: 100%
 	text-align: center
-.thanks_body h4
-	font-size: 36px
-	margin-top: 0
-
-.thanks_body p
-	font-size: 24px
-	margin-bottom: 0
+	h4
+		font-size: 36px
+		margin-top: 0
+	p
+		font-size: 24px
+		margin-bottom: 0
 .thanks_page
 	display: table-cell
 	vertical-align: middle
 .footer_logo
 	padding-top: 12px
-
+.mfp-close-btn-in .mfp-close
+	color: #fff!important
 .made_by p 
 	margin-bottom: 10px
 .copyright p 
@@ -144,19 +149,21 @@ ul
 	position: relative
 	color: #fff
 	border-radius: 10px
-	padding: 5rem 0
+	padding: 4.6rem 0 6.2rem
 	background-color: #2d3958
+	width: 100%
+	max-width: 57rem
 	label.error
 		color: red
 	h6
 		font-weight: bold
 		font-size: 3.6rem
 		line-height: 3.6rem
-		margin-bottom: 2rem
+		margin-bottom: 1.8rem
 	p
 		font-size: 2.4rem
 		line-height: 3.6rem
-		margin-bottom: 5.5rem
+		margin-bottom: 4.4rem
 	.form
 		width: 100%
 		max-width: 370px
@@ -172,14 +179,17 @@ ul
 			margin-top: 5px
 			color: #000
 			background-color: #fff
-			padding: 18px 0
+			padding: 14px 0 22px
+			text-align: center
 		textarea
 			resize: none
 			width: 100%
 			margin-top: 5px
 			border-radius: 30px
-			padding-top: 2rem
+			padding-top: 1.5rem
 			height: 13rem
+			text-align: center
+			color: #000
 		button
 			width: 100%
 			margin-top: 5px
@@ -222,3 +232,37 @@ ul
 			text-align: center
 			font: 1.8rem "Exo 2", sans-serif
 			color: #000
+.popup_desc
+	margin: auto
+	text-align: left
+	position: relative
+	color: #fff
+	border-radius: 10px
+	padding: 4.6rem 10rem 6.2rem
+	background-color: #2d3958
+	width: 100%
+	max-width: 117rem
+	h6
+		font-weight: bold
+		font-size: 3.6rem
+		margin-bottom: 3.6rem
+	p
+		font-size: 2rem
+		line-height: 3rem
+		margin-bottom: 3.6rem
+canvas
+	display: none
+.timer-element
+	border: 1px solid #6e608b
+	border-radius: 5px
+	span
+		position: relative
+		top: -2px
+		font-weight: bold
+
+#timer-element-a70906ab7474e39c633babb7d0930f54-secundes,
+#timer-element-e9166ce75df7d392e166cb9ae528cd50-secundes
+	border: 1px solid #999fb2
+	background-color: #39466b
+	span
+		color: #fff!important

@@ -13,8 +13,58 @@ $(document).ready(function() {
 	$('.popup').magnificPopup({
 		type: 'inline'
 	});
+	// scroll
+	$('.scroll').mPageScroll2id();
 	//mask
 	jQuery(function($){
 		$('.phone').mask('+38(099) 999-9999');
 	});
+	// review
+	$('.review_slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		prevArrow: '.review_prev',
+		nextArrow: '.review_next',
+		responsive: [
+			{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2
+			}
+			},
+			{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1
+			}
+			}
+		]
+	});
+	$('.review2_slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		prevArrow: '.review2_prev',
+		nextArrow: '.review2_next',
+		responsive: [
+			{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2
+			}
+			},
+			{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1
+			}
+			}
+		]
+	});
+	// function rev(){
+	// 	if($(window).width() < 768 && $(window).width() > 400)
+	// 	$('.slick-current img').css('paddingRight', '30px');
+	// 	$('.slick-current').next('img').css('paddingLeft', '30px');
+	// }
+	// rev();
+	
 });
